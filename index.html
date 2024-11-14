@@ -12,18 +12,28 @@
     <header>
         <nav>
             <div class="navbar">
-                <h1><a href="#"><span>Flopy's</span> Sushi Shop<img src="Img/icono.png" alt=""></a></h1>
-                <ul>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Sobre nosotros</a></li>
-                    <li><a href="">Contacto</a></li>
+                <a class="titulo" href="#"><span>Flopy's</span> Sushi Shop<img src="Img/icono.png" alt=""></a>
+
+                <input class="checkbox" type="checkbox" id="check">
+                <label class="bar" for="check">
+                
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+                
+                <ul class="ul_links">
+                    <li class="li_links"><a class="btn" href="productos.html">Productos</a></li>
+                    <li class="li_links"><a class="btn" href="#nosotros">Sobre nosotros</a></li>
+                    <li class="li_links"><a class="btn" href="#contacto">Contacto</a></li>
                 </ul>
+                
             </div>
         </nav>
     </header>
     <main>
         <div class="inicio">
-            <img src="Img/inicio.jpg" alt="mano sosteniendo sushi">
+            <img src="Img/inicio.png" alt="mano sosteniendo sushi">
             <h1>Un bocado de Japón en cada pieza</h1>
         </div>
 
@@ -38,7 +48,7 @@
             <div class="info-maki">
                 <div class="info">
                     <h2>MAKI</h2>
-                    <p>Es el rollo de sushi tradicional, donde el pescado y otros ingredientes están enrollados en arroz y envueltos en alga nori. Hay variaciones como el hosomaki (rollos delgados) y futomaki(rollos gruesos).</p>
+                    <p>Es el rollo de sushi tradicional, donde el pescado y otros ingredientes están enrollados en arroz y envueltos en alga nori. Hay variaciones como el hosomaki y futomaki.</p>
                 </div>
                 <img src="Img/info-maki.jpg" alt="makis">
             </div>
@@ -53,25 +63,67 @@
                     <h4>-Usuario 1</h4>
                 </div>
                 <div>
-                    <h3>¡Muy recomendado!</h3>
-                    <p>La calidad del sushi es excelente, y además tienen opciones para todos los gustos. Pedí el roll Philadelphia y estaba delicioso. ¡Recomendado al 100%!</p>
+                    <h3>¡Pescado super fresco!</h3>
+                    <p>¡Increíble! El sushi estaba súper fresco y cada pieza era perfecta. Pedí un combo y la presentación fue impecable. Definitivamente, mi nuevo lugar favorito para pedir sushi.</p>
+                    <h4>-Usuario 2</h4>
+                </div>
+                <div>
+                    <h3>Sabor exquisito</h3>
+                    <p>Flopy's Sushi Store es una joya. Cada roll tiene un sabor espectacular, y se nota el amor que le ponen a cada pedido. Ideal para los amantes del sushi.</p>
                     <h4>-Usuario 1</h4>
                 </div>
                 <div>
-                    <h3>¡Muy recomendado!</h3>
-                    <p>La calidad del sushi es excelente, y además tienen opciones para todos los gustos. Pedí el roll Philadelphia y estaba delicioso. ¡Recomendado al 100%!</p>
-                    <h4>-Usuario 1</h4>
-                </div>
-                <div>
-                    <h3>¡Muy recomendado!</h3>
-                    <p>La calidad del sushi es excelente, y además tienen opciones para todos los gustos. Pedí el roll Philadelphia y estaba delicioso. ¡Recomendado al 100%!</p>
+                    <h3>Recomiendo totalmente</h3>
+                    <p>La página es muy fácil de usar, y el servicio al cliente es súper atento. Me encantó que el sushi llegó fresquito y con los ingredientes perfectos. ¡Recomiendo totalmente!</p>
                     <h4>-Usuario 1</h4>
                 </div>
             </div>
         </div>
+        <div>
+            <button class="cssbuttons-io-button">
+              EMPIEZA A COMPRAR
+              <div class="icon">
+                <svg
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+        </div>
     </main>
     <footer>
+        <div class="container-footer">
+            <div class="logo">
+                <h1 class="titulo"><a href="#"><span>Flopy's</span> Sushi Shop<img src="Img/icono.png" alt=""></a></h1>
+            </div>
 
+            <section id="nosotros" class="sobre-nosotros">
+                <h3>SOBRE NOSOTROS</h3>
+
+                <p>Si estás aquí, seguro compartimos algo en común: ¡el amor por el sushi! Esta página surgió como parte de un proyecto para un curso, pero también como una forma de mostrar mi pasión por esta deliciosa comida. Desde los rolls clásicos hasta los sabores más creativos, <span>Flopy’s Sushi Store</span> es mi pequeño rincón donde celebro cada pieza de sushi como si fuera una obra de arte. Así que, si eres tan fan del sushi como yo, ¡prepárate para descubrir algo delicioso!</p>
+            </section>
+            <div id="contacto" class="contact-form">
+              <span class="heading">CONTACTANOS</span>
+              <form>
+                <label for="name">Nombre:</label>
+                <input type="text" required="">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required="">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required=""></textarea>
+                <button type="submit">ENVIAR</button>
+              </form>
+            </div>
+        </div>
+        
     </footer>
 </body>
 </html>
