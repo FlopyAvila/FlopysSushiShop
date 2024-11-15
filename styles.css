@@ -69,8 +69,7 @@ main {
   color: #fff;
 }
 
-.btn:focus:after,
-.btn:hover:after {
+.btn:focus:after, .btn:hover:after {
   width: 100%;
   left: 0%;
 }
