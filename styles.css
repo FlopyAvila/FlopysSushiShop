@@ -18,7 +18,18 @@ body{
     font-family: "Kaisei Decol", serif;
     font-style: normal;
     font-weight: 400;
-    color: #ffffff;
+    color: #e6e6e6;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -28,10 +39,12 @@ body{
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 55px;
     margin: 0;
-    padding: 20px 40px;
+    padding: 25px 35px;
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -41,7 +54,7 @@ body{
 }
 
 .btn{
-    margin-right: 60px;
+    margin-left: 40px;
     align-items: center;
     font-size: 20px;
     text-decoration: none;
@@ -99,15 +112,23 @@ a{
 }
 
 .inicio{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     margin: 0;
+    padding: 0;
+    margin-top: 55px;
+    margin-bottom: 75px;
 }
 
 .inicio img{
-    margin: 55px 0;
     width: 100%;
     height: 500px;
     object-fit: cover;
     object-position:center ;
+    display: block;
+    margin: 0;
 }
 
 .inicio h1{
@@ -117,18 +138,19 @@ a{
     top: 400px;
     left: 50%;
     transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
     text-align: center;
 }
 
 .info-rolls{
-    width: 100%;
-    max-width: 60em;
-    margin: 0 auto;
+    width: 75%;
+    max-width: 1200px;
+    margin: 4em auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 4em;
+    
 }
 
 .info-rolls h2{
@@ -139,6 +161,31 @@ a{
     font-size: 24px;
 }
 
+.info-maki {
+    grid-template-areas: "info img";
+}
+
+.info-nigiri {
+    grid-template-areas: "img info";
+}
+
+.info-maki .info {
+    grid-area: info;
+    text-align: right;
+}
+
+.info-nigiri .info {
+    grid-area: info;
+    text-align: left;
+}
+
+.info-maki img {
+    grid-area: img;
+}
+
+.info-nigiri img {
+    grid-area: img;
+}
 
 .info-maki h2{
     text-align: right;
@@ -148,14 +195,19 @@ a{
 }
 
 .info-rolls img{
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .info-nigiri, .info-maki{
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #161815;
-    display: flex;
     border-radius: 10px;
+    overflow: hidden;
+    min-height: 350px;
 }
 
 
@@ -165,10 +217,23 @@ a{
 
 
 .info{
-    margin: 20px 65px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info h2{
+    color: #AF1C00;
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info p {
     color: #ffffff;
-    align-items: center;
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .resenias{
@@ -199,7 +264,7 @@ a{
     font-size: 14px;
     font-weight: lighter;
     width: 220px;
-    margin: 40px auto;
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -208,6 +273,7 @@ a{
 .cartas-resenias h3{
     font-weight: 800;
     font-size: 18px;
+    padding-top: 20px;
 }
 
 .cartas-resenias h4{
@@ -289,9 +355,10 @@ a{
     display: inline-block;
     justify-content: center;
     max-width: 950px;
-    margin: 7px auto;
+    margin: 0 auto;
     text-align: center;
     width: 100%;
+    padding: 40px 0;
 }
 
 .sobre-nosotros span, h3{
@@ -305,9 +372,14 @@ a{
     font-size: 24px;
 }
 
+.sobre-nosotros p{
+    font-size: 18px;
+}
+
 .contact-form {
+    width: 50%;
     background-color: #141613;
-    padding: 20px 80px;
+    padding: 20px 60px;
     margin: 50px 0;
     border-radius: 10px;
     border: 1px solid #5e1000;
@@ -337,7 +409,7 @@ a{
 textarea {
     resize: none;
     height: 80px;
-    width: 200px;
+    width: auto;
 }
 
 .contact-form input, .contact-form textarea {
@@ -475,15 +547,85 @@ main h2{
     box-shadow: 0px 0px var(--main-color);
 }
 
-@media (max-width : 1170px){
+@media screen and (max-width:1024px){
 
+    .navbar{
+        padding: 25px 15px;
+        position: fixed;
+    }
+
+    .btn{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .inicio{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .inicio h1{
+        top:70%;
+        font-size: 28px;
+    }
+
+    .inicio img{
+        height: 400px;
+        width: 100%;
+        margin: 55px 0 60px 0;
+    }
+
+    .info-rolls{
+        width: 90%;
+    }
+
+    .resenias h2{
+        margin: 0 auto;
+    }
+
+    .cartas-resenias {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .cartas-resenias div{
+        width: auto;
+        padding: 15px;
+    }
+    
+    .cartas-resenias p {
+        width: auto; 
+        font-size: 16px; 
+    }
+
+    .cssbuttons-io-button{
+        font-size: 24px;
+    }
+
+
+    .sobre-nosotros {
+        width: 75%;
+    }
+
+    .contact-form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .titulo{
+        font-size: 40px;
+    }
     .navbar{
         height: 90px;
         display: flex;
         justify-content:space-between;
         align-items: center;
         flex-wrap: wrap;
-        position: relative;
+        position: fixed;
     }
 
     .ul_links{
@@ -507,13 +649,14 @@ main h2{
         height: 40em;
     }
 
+    
+
     .btn{
         font-size: 3.5em;
         font-weight: bolder;
     }
 
     .checkbox{
-        -webkit-appearance: none;
         display: none;
         visibility: hidden;
     }
@@ -526,9 +669,6 @@ main h2{
         height: 40px;
     }
 
-    .checkbox{
-        display: none;
-    }
       
     .bar span {
         position: absolute;
@@ -553,42 +693,83 @@ main h2{
         bottom: 0;
     }
 
-    .cartas-resenias{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        gap: 20px;
-        
+    .inicio {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 100px;
+    }
+    .inicio img{
+        width: 100%;
+        height: 600px;
+        margin: 0;
     }
 
+    .inicio h1{
+        top:75%;
+        font-size: 28px;
+    }
+    
+    .info-nigiri, .info-maki{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "img"
+            "info";
+        min-height: auto;
+    }
+
+    .info {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .info h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .info p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .cartas-resenias{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;   
+        padding: 10px;
+    }
+
+    .cartas-resenias div{
+        width: auto;
+        height: auto;
+        min-height: 350px;
+        padding: 5px;
+    }
+
+   
+    .cartas-resenias p{
+        font-size: 15px;
+        font-weight: lighter;
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+    }
     .resenias{
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
         margin-top: 60px;
         text-align: center;
+        padding: 15px;
     }
 
     .resenias h2{
-        margin-top: 300px;
+        margin: 0 auto;
+        margin-top: 50px;
         margin-bottom: 10px;
         font-size: 30px;
-    }
-
-    .cartas-resenias div{
-        background-color: #161815;
-        border-radius: 15px;
         width: 100%;
-        height: 350px;
-    
-    }
-
-    .cartas-resenias p{
-        font-size: 18px;
-        font-weight: lighter;
-        width: 70%;
-        margin: 30px auto;
-        text-align: center;
     }
 
     .cartas-resenias h4{
@@ -599,51 +780,90 @@ main h2{
         font-size: 24px;
     }
 
+
+    .cssbuttons-io-button{
+        font-size: 28px;
+    }
+
+
     .logo, .sobre-nosotros{
         width: 100%;
         max-width: 700px;
         margin: 0 auto;
         text-align: center;
+        padding: 25px;
     }
     
     .sobre-nosotros span{
-        font-size: 28px;
+        font-size: 20px;
     }
     
     .sobre-nosotros h3{
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .sobre-nosotros p{
-        font-size: 24px;
+        font-size: 18px;
     }
 
+    .contact-form .heading{
+        margin-bottom: 40px;
+    }
 
-    .info-rolls{
-        width: 100%;
-        max-width: 58em;
-        height: 300px;
-        margin-top: 200px;
-        margin-bottom: 200px;
-        gap: 2em;
+    .contact-form{
+        width: 85%;
+        padding: 50px 20px;
     }
-    
-    .info-rolls img{
-        height: 270px;
+
+    .contact-form button[type="submit"] {
+        margin-top: 20px;
     }
-    .info-rolls h2{
-        margin: 10px 0;
-        font-size: 24px;
-    }
-    
-    .info{
-        margin: 0 65px;
-        color: #ffffff;
-        align-items: center;
-        font-size: 20px;
-        padding: 0 10px;
-    }
+
 }
 
+@media screen and (max-width: 576px) {
 
+    .titulo{
+        font-size: 20px;
+    }
+
+    .container-footer .titulo{
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 2em;
+    }
+
+    .checkbox:checked ~ .ul_links {
+        height: 20em;
+    }
+
+    
+
+    .inicio img {
+        height: 600px;
+        object-position: 60%;
+    }
+    .cartas-resenias{
+        grid-template-columns: 1fr;
+        row-gap:40px;
+    }
+
+    .cartas-resenias p, h4{
+        font-size: 18px;
+    }
+
+    .cartas-resenias h3{
+        padding: 0 2px;
+    }
+
+    .cartas-resenias div{
+        padding: 20px 0;
+    }
+
+    .cssbuttons-io-button {
+        font-size: 18px;
+    }
+}
 
