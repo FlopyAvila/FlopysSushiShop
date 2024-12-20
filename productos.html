@@ -6,7 +6,7 @@
     <title>Flopy's Sushi Shop</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="Img/icon.ico" type="image/x-icon">
-
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 </head>
 <body>
     <header>
@@ -26,6 +26,10 @@
                     <li class="li_links"><a class="btn" href="index.html">Inicio</a></li>
                     <li class="li_links"><a class="btn" href="#nosotros">Sobre nosotros</a></li>
                     <li class="li_links"><a class="btn" href="#contacto">Contacto</a></li>
+                    <li class="li_links"><a class=" cart-btn" href="#carrito-seccion">
+                        <img src="Img/carrito.png" alt="Carrito" class="cart-icon">
+                        <div class="contador-carrito">0</div>
+                    </a></li>
                 </ul>
 
             </div>
@@ -39,9 +43,10 @@
                 <div class="content">
                     <img src="Img/nigiri.png" alt="nigiri" title="" />
                     <h4>Nigiri</h4>
+                    <h4>$300</h4>
                     <p>Este tipo de sushi incluye una bola de arroz con una lámina de pescado encima (como salmón, atún, o anguila). Es sencillo y permite saborear bien el pescado.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Nigiri', 300)" class="button" type="button">
                   <span class="button__text">Agregar</span>
                   <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                 </button>
@@ -51,9 +56,10 @@
                 <div class="content">
                     <img src="Img/philadelphiaroll.png" alt="philadelphia roll" title="Philadelphia Roll" />
                     <h4>Philadelphia Roll</h4>
+                    <h4>$400</h4>
                     <p>Salmón, queso crema y, a veces, con aguacate o pepino. Es uno de los más populares gracias al toque cremoso que aporta el queso.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Philadelphia Roll', 400)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -62,9 +68,10 @@
                 <div class="content">
                     <img src="Img/rainbowroll.png" alt="rainbow roll" title="Rainbow Roll" />
                     <h4>Rainbow Roll</h4>
+                    <h4>$500</h4>
                     <p>California roll cubierto con tiras de diferentes pescados, especialmente salmón y atún, y palta en láminas, lo que da un aspecto colorido.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Rainbow roll', 500)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -73,9 +80,10 @@
                 <div class="content">
                     <img src="Img/californiaroll.png" alt="california roll" title="California Roll" />
                     <h4>California Roll</h4>
+                    <h4>$450</h4>
                     <p>Kanikama, palta y pepino, cubierto de sésamo o masago (huevas). Este roll, al no llevar pescado crudo, es ideal para quienes prefieren opciones cocidas.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('California Roll', 450)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -84,9 +92,10 @@
                 <div class="content">
                     <img src="Img/SpicyTunaRoll.png" alt="Spicy Tuna Roll" title="Spicy Tuna Roll" />
                     <h4>Spicy Tuna Roll</h4>
+                    <h4>$500</h4>
                     <p>Este rollo combina atún picante (mezclado con sriracha o alguna salsa picante) y otros ingredientes como pepino, y es muy popular por su toque de sabor.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Spicy Tuna Roll', 500)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -95,9 +104,10 @@
                 <div class="content">
                     <img src="Img/makiroll.png" alt="maki roll" title="Maki Roll" />
                     <h4>Maki</h4>
+                    <h4>$400</h4>
                     <p>Salmón y palta, a veces con un toque de limón, envuelto en alga nori y arroz.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Maki', 400)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -106,9 +116,10 @@
                 <div class="content">
                     <img src="Img/geisharoll.png" alt="geisha" title="Geisha" />
                     <h4>Geisha</h4>
+                    <h4>$400</h4>
                     <p>Delicadas rodajas de salmón o pescado blanco envueltas alrededor de queso crema y palta. Una opción fresca y ligera, sin arroz, ideal para los amantes del pescado.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Geisha', 400)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -117,9 +128,10 @@
                 <div class="content">
                     <img src="Img/newyorkroll.png" alt="new york roll" title="New York Roll" />
                     <h4>New York Roll</h4>
+                    <h4>$300</h4>
                     <p>Colchón de arroz, salmón, palta y phila, con sésamo por fuera</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('New York Roll', 300)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -128,9 +140,10 @@
                 <div class="content">
                     <img src="Img/futomakiroll.png" alt="futomaki roll" title="Futomaki Roll" />
                     <h4>Futomaki Roll</h4>
+                    <h4>$450</h4>
                     <p>Roll grueso y generoso relleno de salmón, palta, pepino y queso crema. Perfecto para quienes buscan una explosión de sabores y un bocado más completo.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Futomaki Roll', 450)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
@@ -139,14 +152,45 @@
                 <div class="content">
                     <img src="Img/buenosairesroll.png" alt="buenos aires roll" title="Buenos Aires Roll" />
                     <h4>Buenos Aires Roll</h4>
+                    <h4>$500</h4>
                     <p>Salmón, queso crema y langostino cocido. Es una adaptación local con ingredientes accesibles y muy del gusto argentino.</p>
                 </div>
-                <button class="button" type="button">
+                <button onclick="agregarProducto('Buenos Aires Roll', 500)" class="button" type="button">
                     <span class="button__text">Agregar</span>
                     <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
                   </button>
             </div>
         </div>
+        <h2 id="carrito-seccion">Carrito</h2>
+        <div class="carrito-container">
+            <div class="carrito-productos">
+            </div>
+            <div class="carrito-resumen">
+                <h3>Total a pagar: <p id="total">$0</p></h3>
+                <button onclick="limpiarCarrito()">Vaciar carrito</button>
+            </div>
+        </div>
+        <div>
+            <button onclick="pagar()" class="cssbuttons-io-button">
+            IR A PAGAR
+            <div class="icon">
+                <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"
+                ></path>
+                </svg>
+            </div>
+            </button>
+
+        </div>
+
     </main>
     <footer> 
         <div class="container-footer">
@@ -176,5 +220,7 @@
               </div>
         </div>
     </footer>
+
+    <script src="productos.js"></script>
 </body>
 </html>
