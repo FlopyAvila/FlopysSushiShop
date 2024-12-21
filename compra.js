@@ -4,14 +4,12 @@ const total = localStorage.getItem('total') || 0;
 const resumen = document.getElementById("detalle");
 let resumenTexto = "Resumen de la compra:<br><br>";
 
-for (let i = 0; i < productos.length; i++) {
-    const producto = productos[i];
-    resumenTexto += `${producto.nombre}: $${producto.precio}<br>`;
-}
+productos.forEach(producto => {
+    resumenTexto += `x${producto.cantidad} ${producto.nombre} - $${producto.total} <br>`;
+});
 
-resumenTexto += `<br>Total a pagar: $${total}`;
+resumenTexto += `<br><strong>Total a pagar: $${total}</strong>`;
 resumen.innerHTML = resumenTexto;
-
 
 function enviarFormulario(event) {
     event.preventDefault(); 
@@ -27,10 +25,9 @@ function enviarFormulario(event) {
     }
 
     let carritoContenido = '';
-    for (let i = 0; i < productos.length; i++) {
-        const producto = productos[i];
-        carritoContenido += `${producto.nombre} - $${producto.precio}\n`;
-    }
+    productos.forEach(producto => {
+        carritoContenido += `${producto.nombre} x${producto.cantidad} - $${producto.total}\n`;
+    });
 
     const totalConPesos = `$${total}`;
 
@@ -41,3 +38,4 @@ function enviarFormulario(event) {
 }
 
 document.getElementById('botonEnviar').addEventListener('click', enviarFormulario);
+
