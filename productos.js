@@ -1,4 +1,4 @@
-//Agregar un contador al lado de los botones de cada tarjeta para que se vean (tambien tengo que poner mi linkedin abajo de todo pero eso no tiene que ver con javaScript)
+//Agregar un contador al lado de los botones de cada tarjeta para que se vean (tambien tengo que poner mi linkedin abajo de todo pero eso no tiene que ver con javaScript) :)
 
 
 let contador = 0;
