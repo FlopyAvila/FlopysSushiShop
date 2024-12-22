@@ -1,5 +1,7 @@
-//Agregar un contador al lado de los botones de cada tarjeta para que se vean (tambien tengo que poner mi linkedin abajo de todo pero eso no tiene que ver con javaScript) :)
 
+document.addEventListener('DOMContentLoaded', () => {
+    cargarCarrito();
+});
 
 let contador = 0;
 let productos = [];
@@ -20,6 +22,8 @@ function agregarProducto(producto, precio) {
 
     total += precio;
     document.getElementById('total').textContent = `$${total}`;
+    localStorage.setItem('productos', JSON.stringify(productos));
+    localStorage.setItem('total', total);
 }
 
 function actualizarCarrito() {
@@ -36,6 +40,8 @@ function actualizarCarrito() {
         `;
 
         carrito.appendChild(productoHTML);
+
+        actualizarCantidadEnTarjeta(item.nombre, item.cantidad);
     });
 
     document.getElementById('total').textContent = `$${total}`;
@@ -49,6 +55,21 @@ function actualizarCarrito() {
     });
 }
 
+
+function actualizarCantidadEnTarjeta(nombreProducto, cantidad) {
+    const tarjetas = document.querySelectorAll('.cards .content');
+
+    tarjetas.forEach(tarjeta => {
+        const titulo = tarjeta.querySelector('h4');
+        if (titulo.textContent.includes(nombreProducto)) {
+            if (cantidad > 0) {
+                titulo.textContent = `(${cantidad}) ${nombreProducto}`;
+            } else {
+                titulo.textContent = nombreProducto; 
+            }
+        }
+    });
+}
 
 function incrementarCantidad(event) {
     const index = event.target.dataset.index;
@@ -69,6 +90,8 @@ function disminuirCantidad(event) {
         total -= productos[index].precio;
     } else {
         total -= productos[index].precio;
+
+        actualizarCantidadEnTarjeta(productos[index].nombre, 0);
         productos.splice(index, 1); 
     }
 
@@ -93,3 +116,13 @@ function limpiarCarrito() {
     localStorage.removeItem('total');
 }
 
+function cargarCarrito() {
+    const productosGuardados = JSON.parse(localStorage.getItem('productos'));
+    const totalGuardado = parseInt(localStorage.getItem('total'));
+
+    if (productosGuardados && productosGuardados.length > 0) {
+        productos = productosGuardados;
+        total = totalGuardado || 0;
+        actualizarCarrito();
+    }
+}
