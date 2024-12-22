@@ -1,3 +1,7 @@
-# Sushi-Shop-Talento-Tech
+# Flopy's Sushi Shop
 
-https://flopyavila.github.io/Sushi-Shop-Talento-Tech/index.html#
+https://flopyavila.github.io/FlopysSushiShop/
+
+Proyecto para el curso de Front End de Talento Tech
+
+
