@@ -112,6 +112,15 @@ function limpiarCarrito() {
     carrito.innerHTML = 'Carrito Vacio'; 
     document.getElementById('total').textContent = '$0';
 
+    const tarjetas = document.querySelectorAll('.cards .content');
+    tarjetas.forEach(tarjeta => {
+        const titulo = tarjeta.querySelector('h4');
+        if (titulo) {
+            const nombreOriginal = titulo.textContent.replace(/^\(\d+\)\s*/, '');
+            titulo.textContent = nombreOriginal;
+        }
+    });
+
     localStorage.removeItem('productos');
     localStorage.removeItem('total');
 }
